@@ -1,27 +1,37 @@
 <!doctype html>
-<html lang="en">
+<html ng-app="LunchCheck">
   <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
     <title>Lunch Checker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
+      .black {border-color: : black;}
+      .red {border-color: red;}
+      .green {border-color: green;}
+      .msg_black {color: black;}
+      .msg_red {color: red;}
+      .msg_green {color: green;}
     </style>
   </head>
 <body>
-   <div class="container">
+   <div class="container" ng-controller="LunchCheckController">
      <h1>Lunch Checker</h1>
 
          <div class="form-group">
-             <input id="lunch-menu" type="text"
+             <input type="text" ng-model="lunch_menu" ng-class="inp_cls"
              placeholder="list comma separated dishes you usually have for lunch"
              class="form-control">
          </div>
          <div class="form-group">
-             <button class="btn btn-default">Check If Too Much</button>
+             <button class="btn btn-default" ng-click="LunchCheck();">Check If Too Much</button>
          </div>
-         <div class="form-group message">
+         <div class="form-group message" ng-model="message" ng-class="msg_cls">
            <!-- Your message can go here. -->
+           {{message}}
          </div>
    </div>
 
