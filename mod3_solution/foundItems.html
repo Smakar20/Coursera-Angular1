@@ -1,0 +1,11 @@
+<br>
+<br>
+<div class="container">
+  <ul>
+    <li ng-repeat='item in list.foundItem'>
+      Name: {{ item.name }}, Short Name: {{ item.short_name }}, Description: {{ item.description }}
+      <button ng-click='list.onRemove({idx: $index});'>Don't want this one!</button>
+    </li>
+  </ul>
+</div>
+<div ng-if="list.emptyMsg.trim() !== ''">{{ list.emptyMsg }}</div>
