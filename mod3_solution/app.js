@@ -62,7 +62,7 @@ function MenuSearchService($http){
     return $http({url: 'https://davids-restaurant.herokuapp.com/menu_items.json'})
     .then((result) => {
       for (var item of result.data.menu_items){
-        if (item.description.indexOf(searchTerm) !== -1) foundItems.push(item);
+        if (item.description.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) foundItems.push(item);
       }
       return foundItems;
     })
