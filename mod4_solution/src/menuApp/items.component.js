@@ -1,13 +1,14 @@
 (function () {
-    'use strict';
-    
-    angular.module('data')
-    .component('myItems', {
-      templateUrl: 'src/menuApp/templates/items.template.html',
-      bindings: {
-        items: '<'
-      }
-    });
-    
-    })();
-    
+  'use strict';
+  
+  angular.module('data')
+  .component('menuList', {
+    templateUrl: 'src/menuapp/templates/itemlist.template.html',
+    bindings: {
+      items: '<',
+        name:'<'
+      
+    }
+  });  
+  
+})();

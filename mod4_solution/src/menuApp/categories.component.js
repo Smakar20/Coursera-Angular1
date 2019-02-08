@@ -1,13 +1,11 @@
 (function () {
-    'use strict';
-    
-    angular.module('MenuApp')
-    .component('myCategories', {
-      templateUrl: 'src/menuApp/templates/mycategories.template.html',
-      bindings: {
-        categories: '<'
-      }
-    });
-    
-    })();
-    
+  'use strict';
+  
+  angular.module('data')
+  .component('categoryList', {
+    templateUrl: 'src/menuapp/templates/category-list.template.html',
+    bindings: {
+      category: '<'
+    }
+  }); 
+})();
